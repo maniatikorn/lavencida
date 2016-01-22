@@ -16,6 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from bloglavencida.views import IndexView, EntradaDetailView
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$',IndexView.as_view()),
+    url(r'^blog/(?P<slug>[-\w]+)/$', EntradaDetailView.as_view()),
+
 ]

@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>Blog de Juan</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<center><h1>Blog principal</h1></center>
+		{% for entrada in object_list  %}
+		
+		<h2><a href="blog/{{ entrada.slug }}">{{ entrada.titulo }}</a></h2>
+		<p>{{ entrada.contenido }}</p>
+
+		{% endfor %}
+	</body>
+</html>
