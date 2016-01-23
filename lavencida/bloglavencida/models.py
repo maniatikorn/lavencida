@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.template.defaultfilters import slugify
+from django_markdown.models import MarkdownField
 
 # Create your models here.
 
@@ -9,6 +10,7 @@ class Entrada(models.Model):
 
 	titulo = models.CharField(max_length=200)
 	contenido = models.TextField()
+	contenido = MarkdownField()
 	slug = models.SlugField(editable=False)
 	
 	def __unicode__(self):
