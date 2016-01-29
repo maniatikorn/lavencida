@@ -1,0 +1,1 @@
+web: gunicorn bloglavencida.wsgi --log-file -
